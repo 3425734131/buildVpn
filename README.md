@@ -7,69 +7,6 @@
 # buildVpn 
 ### 图文教程搭建一个vpn
 
-### 准备工作：有支付宝账户，有一个可用邮箱，有10美元。（根据我下面的链接注册，会赠送100美元的体验金，如果长期用可以再去充值）
-
-### 前言：首先我们选择Vultr供应商来购买海外VPS服务器，具有12个地区可以选择，当然也可以选择其他的供应商，但是Vultr的优点在于，所有服务器创建成功后开始计费，并且是按照小时来计费的，如果你删除掉服务器将不再计费。众所周知，目前国内的VPN打击特别严厉，很多VPN已经被封掉了，我们购买的海外服务器也有可能是被墙掉IP或者用一段时间被墙的。所以Vultr可以随时创建一个新的服务器（会分配一个新的ip），删除掉原有的。
-
-### 创建账户及购买VPS服务器
-
-第一步：登录vultr官网注册一个账户，只需要一个邮箱和密码即可。然后到你注册的邮箱中去验证你的账户。
-官网链接(https://www.vultr.com/?ref=7348872)        这个链接就是普通的推荐链接
-官网推广链接(https://www.vultr.com/?ref=8942380-8H) 这个链接是官网一个推荐链接，有100刀体验金
-![第一步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101419422.jpg)
-
-第二步：登录你的账户，然后在如图所示地方进行充值。这里我们可以使用微信或支付宝扫码支付，充值成功后，可以再右上角看到你的账户余额。
-
-![第二步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101506198.jpg)
-
-第三步：购买VPS服务器。在Servers标签中看到，我们目前还没有服务器，这时选择右上角的加号新添加一个服务器。
-
-![第三步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101543991.jpg)
-
-我们首先选择服务器所在地区，这里我们选择NewYork纽约，一般来说选择日本、纽约、洛杉矶、硅谷都还可以（全看人品）。
-
-![第四步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101558312.jpg)
-
-其次我们选择服务器的系统版本。这里注意选择CentOS6 ，默认是7由于防火墙等原因可能会影响接下来的操作。
-
-![第五步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101612917.jpg)
-
-最后，我们选择每个月2.5刀，500G带宽的就可以了。
-
-![第六步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101629749.jpg)
-
-其他的不需要选择，如果需要使用IPv6就在第四部选择。这里我们不选择，默认使用IPv4，最下面我们选择Depliy Now 新建服务器。
-
-![第七步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101643841.jpg)
-
-到目前为止我们就已经成功的创建了一个海外服务器。但是这个服务器是否可用，有没有被墙掉呢？当服务器安装完成之后，我们来测试一下。
-
-![第八步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101656506.jpg)
-
-我们可以看到已经在运行的服务器ip为  45.63.7.251 ，接下来就测试一下是否能够连接。
-Win： win + R快捷键或者在开始菜单-附件-运行，调出运行窗口，输入cmd，然后输入ping  45.63.7.251 可以看到是否被墙。（多ping几次）
-Mac + Linux：直接在命令行窗口输入ping  45.63.7.251 （按ctrl + c 退出）
-或者通过网站ping检测，如果全是超时代表被墙了。http://ping.chinaz.com/
-
-![第九步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101706991.jpg)
-
-这里可以看到刚刚新建的服务器是被墙掉的。无法访问，这时就再新建一个服务器，然后在ping。如果同一个地区多次无法ping通，就换一个地区试试，这里推荐日本。（每次新建服务器，按小时首付0.01刀，删除后不计费，十次也才不到一块钱）
-
-如图，我再次新建了一个服务器，这回可以ping通，说明没有被墙。就是延时高一点，延时与你的网络和当前的时间段，使用的人数有关。
-
-![第九步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101717865.jpg)
-
-![第十步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101733164.jpg)
-
-这时我们把之前被墙掉的服务器删除就可以了。新建可用的服务器已经全部完成了。
-
-![第十一步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101748789.jpg)
-
-点击详情可以看到服务器的用户名和密码
-
-![第十二步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101802763.jpg)
-
-![第十三步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101812373.jpg)
 
 接下来我们就可以搭建VPN了。距离成功已经很近了。
 
