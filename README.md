@@ -7,21 +7,7 @@
 # buildVpn 
 ### 图文教程搭建一个vpn
 
-
-接下来我们就可以搭建VPN了。距离成功已经很近了。
-
-首先如果我们是Windows系统需要下载一个软件（Mac 或 Linux不需要），Xshell或者SecureCRT。这里我用的是SecureCRT。
-填写你的IP地址，用户名为root，点击链接，点击接受保存，输入你的密码，成功连接。
-
-![第十四步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101823784.jpg)
-![第十五步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101836775.jpg)
-
-其次要设置编码格式，不然一会的中文会显示乱码。菜单栏 选项-会话选项-外观-字符编码-UTF8-确认。
-关闭软件，重新连接（直接双击IP就可以了）。
-
-![第十六步](https://github.com/yukaiji/buildVpn/blob/master/image/20180307101848327.jpg)
-
-然后复制下面的一键部署管理脚本，粘贴到窗口中（鼠标右键一下即可粘贴）
+复制下面的一键部署管理脚本，粘贴到窗口中（鼠标右键一下即可粘贴）
 
 CentOS6/Debian6/Ubuntu14 ShadowsocksR一键部署管理脚本(可以把下面命令按行拆开分步执行)：
 
